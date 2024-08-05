@@ -1,0 +1,185 @@
+:root {
+    /* Define color variables for easy maintenance */
+    --primary-color: #493fa3;
+    --secondary-color: #ee99f4;
+    --background-gradient: linear-gradient(140deg, var(--secondary-color), var(--primary-color));
+    --text-color: #444444;
+    --accent-color: #CC5DE8;
+    --font-family: 'Lato', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Center the body content and apply background gradient */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: var(--background-gradient);
+    font-family: var(--font-family);
+}
+
+/* Styling for the main login page container */
+.login_page {
+    width: 80%;
+    max-width: 1200px;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 10px rgba(38, 38, 69, 0.52);
+    overflow: hidden;
+}
+
+/* Styling for the login image section */
+.login-img {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.login-img img {
+    object-fit: cover;
+    width: 95%;
+}
+
+/* Styling for the form within the login page */
+.login_page form {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f5f5f5;
+}
+
+/* Styling for the form heading */
+.login_page form h1 {
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    letter-spacing: 3px;
+}
+
+/* Styling for each form group */
+.form-group {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+/* Styling for input fields within the form */
+.form-group input {
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 1rem;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    outline: none;
+}
+
+/* Styling for labels within the form group */
+.form-group label {
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+/* Move label and change its color when input is focused or valid */
+.form-group input:focus~label,
+.form-group input:valid~label {
+    top: -12px;
+    left: 8px;
+    color: var(--accent-color);
+    font-size: 12px;
+    letter-spacing: 0;
+}
+
+/* Styling for icons within form groups */
+i {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+i img {
+    width: 25px;
+}
+
+i#show-icon, #hide-icon {
+    cursor: pointer;
+}
+
+/* General styling for buttons */
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+    4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+/* Styling for specific button class */
+.btn-1 {
+    background: linear-gradient(0deg, rgba(96, 9, 240, 1) 0%, rgba(129, 5, 240, 1) 100%);
+    border: none;
+}
+
+/* Hover effects for the button */
+.btn-1:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Styling for custom text and links */
+.custom-text {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+}
+
+.custom-text a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding-left: 3px;
+    color: rgba(96, 9, 240, 1);
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .login-img {
+        display: none;
+    }
+
+    .login_page form {
+        width: 100%;
+    }
+}

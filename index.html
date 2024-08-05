@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Basic page settings and meta data -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <!-- Link to the stylesheet -->
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+<section class="login_page">
+    <!-- Login image section -->
+    <div class="login-img">
+        <img src="./assets/img/login-img.png" alt="Login Image">
+    </div>
+    <!-- Login form -->
+    <form action="">
+        <h1>Welcome</h1>
+        <!-- Username input group -->
+        <div class="form-group">
+            <input type="text" placeholder=" " maxlength="13" required>
+            <label>Username</label>
+            <i><img src="./assets/img/icons8-male-user-32.png"></i>
+        </div>
+        <!-- Password input group -->
+        <div class="form-group">
+            <input type="password" id="password-input" placeholder=" " maxlength="13" required>
+            <label>Password</label>
+            <!-- Icons for showing and hiding the password -->
+            <i id="show-icon"><img src="./assets/img/icons8-lock-50.png"></i>
+            <i id="hide-icon"><img src="./assets/img/icons8-unlock-50.png"></i>
+        </div>
+        <!-- Sign in button -->
+        <button type="submit" class="custom-btn btn-1">Sign In</button>
+        <!-- Sign up link -->
+        <p class="custom-text">
+            Don't have an account? <a href="#">Sign Up!</a>
+        </p>
+    </form>
+</section>
+
+<!-- Link to the JavaScript file -->
+<script src="./assets/custom.js"></script>
+
+</body>
+</html>
